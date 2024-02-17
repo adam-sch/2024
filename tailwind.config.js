@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
@@ -6,8 +8,33 @@ module.exports = {
       fontFamily: {
         sans: ['Nunito', 'sans-serif'],
         serif: ['Roboto Slab', 'serif']
+      },
+      keyframes: {
+        bounceInFade: {
+          '0%': { transform: 'translateY(25px)', opacity: 0},
+          '75%': { transform: 'translateY(-8px)', opacity: 0.6 },
+          '100%': { transform: 'translateY(0)', opacity: 1 },
+        }
+      },
+      animation: {
+        bounceInFade: 'bounceInFade 0.35s ease forwards',
       }
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ matchUtilities, theme }) => {
+      matchUtilities(
+          {
+            "animation-delay": (value) => {
+              return {
+                "animation-delay": value,
+              };
+            },
+          },
+          {
+            values: theme("transitionDelay"),
+          }
+      );
+    }),
+  ],
 }

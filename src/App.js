@@ -170,8 +170,8 @@ export default App;
 
 function ProfileTitle({ title, icon }) {
   return (
-    <div className="title uppercase px-5 border-r-2 flex last-of-type:border-r-0 border-stone-400 font-extrabold text-sm tracking-wide">
-      <h3>{title}</h3>
+    <div className="title uppercase px-5 border-r-2 flex last-of-type:border-r-0 border-stone-400 font-extrabold text-sm tracking-wide [&:nth-of-type(2)>h3]:animation-delay-300 [&:nth-of-type(3)>h3]:animation-delay-500 [&:nth-of-type(4)>h3]:animation-delay-700">
+      <h3 className="animate-bounceInFade opacity-0 animation-delay-100">{title}</h3>
     </div>
   );
 }
