@@ -72,7 +72,7 @@ function App() {
 
       <Section classes="what-i-can-do">
         <SectionHeading>What I can do:</SectionHeading>
-        <Skills />
+
       </Section>
 
       <Section classes="about">
@@ -103,8 +103,41 @@ function App() {
           title="VP of Engineering"
         >
           <p>At AtreNet I’ve been working as the leader of the engineering department as well as being actively involved with development work. As is the nature for smaller companies I’ve had to embrace performing across a spectrum of responsibilities and aspects of building and maintaining corporate websites.</p>
+
           <WorkHistoryLineGroup>
             <WorkHistoryLineItem>Creating, upgrading and maintaining WordPress-based platform that was the bread-and-butter for our clients. Enabled fast development while allowing clients to maintain without too much hands-on coding. Constant iterations and improvements over the years for functionality, performance and security. Allowed for high end designs to come to life. Balance of best practices, ease-of-use, client capabilities and developer efficiency.</WorkHistoryLineItem>
+            <WorkHistoryLineItem>Rapid relaunches, projects were generally started by myself to create a clean and scalable base site for other developers to quickly build-out the revamped site and eventual client maintenance</WorkHistoryLineItem>
+            <WorkHistoryLineItem>Maintenance and quick projects - Constantly maintained client sites including managing wordpress and associated updates, occasionally performance and security review to catch any client mistakes. </WorkHistoryLineItem>
+            <WorkHistoryLineItem>Developing strategies, processes and frameworks for managing scalable multi-thousand page sites.</WorkHistoryLineItem>
+            <WorkHistoryLineItem>Demoing platform and capabilities during sales pitches.</WorkHistoryLineItem>
+            <WorkHistoryLineItem>Requirements gathering and initial project infrastructure planning plus execution.</WorkHistoryLineItem>
+            <WorkHistoryLineItem>Project management and client relations.</WorkHistoryLineItem>
+            <WorkHistoryLineItem>Hiring and training engineers/developers.</WorkHistoryLineItem>
+            <WorkHistoryLineItem>Coordinating with other development, engineering and marketing teams.</WorkHistoryLineItem>
+            <WorkHistoryLineItem>Project costs and scoping.</WorkHistoryLineItem>
+            <WorkHistoryLineItem>Overcoming obstacles in limited-resource and time-constrained development.</WorkHistoryLineItem>
+          </WorkHistoryLineGroup>
+
+        </WorkHistory>
+
+        <WorkHistory
+          name="Freelance Design, Development and Consulting"
+          start="2005"
+          end="2018"
+          title="Front-End Engineer"
+        >
+          <p>Worked for many years as a freelance developer for various clients, often being a one-man-shop to meet client’s needs and also working closely with back-end engineers or existing development teams.</p>
+
+          <WorkHistoryLineGroup>
+            <WorkHistoryLineItem>Web site concepting, building and maintenance.</WorkHistoryLineItem>
+            <WorkHistoryLineItem>Captive portals.</WorkHistoryLineItem>
+            <WorkHistoryLineItem>Logos and other graphic assets.</WorkHistoryLineItem>'
+            <WorkHistoryLineItem>Brand management.</WorkHistoryLineItem>
+            <WorkHistoryLineItem>Analytics, reports and A/B testing.</WorkHistoryLineItem>
+            <WorkHistoryLineItem>AdWord campaigns and landing pages.</WorkHistoryLineItem>
+            <WorkHistoryLineItem>Consulting and coordinating with back-end engineers.</WorkHistoryLineItem>
+            <WorkHistoryLineItem>Performance optimization.</WorkHistoryLineItem>
+            <WorkHistoryLineItem>SEO Support.</WorkHistoryLineItem>
           </WorkHistoryLineGroup>
 
         </WorkHistory>
@@ -182,7 +215,7 @@ function SectionHeading({ children, classes }) {
 
 function WorkHistory({ name, website, url, start, end, title, children }) {
   return (
-    <div className="work-history__item mb-2">
+    <div className="work-history__item mb-10">
       <div className="work-history__heading flex align-center content-end">
         <h3 className="text-2xl">{name}</h3>
         {website &&
