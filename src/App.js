@@ -131,13 +131,31 @@ function App() {
           <WorkHistoryLineGroup>
             <WorkHistoryLineItem>Web site concepting, building and maintenance.</WorkHistoryLineItem>
             <WorkHistoryLineItem>Captive portals.</WorkHistoryLineItem>
-            <WorkHistoryLineItem>Logos and other graphic assets.</WorkHistoryLineItem>'
+            <WorkHistoryLineItem>Logos and other graphic assets.</WorkHistoryLineItem>
             <WorkHistoryLineItem>Brand management.</WorkHistoryLineItem>
             <WorkHistoryLineItem>Analytics, reports and A/B testing.</WorkHistoryLineItem>
             <WorkHistoryLineItem>AdWord campaigns and landing pages.</WorkHistoryLineItem>
             <WorkHistoryLineItem>Consulting and coordinating with back-end engineers.</WorkHistoryLineItem>
             <WorkHistoryLineItem>Performance optimization.</WorkHistoryLineItem>
             <WorkHistoryLineItem>SEO Support.</WorkHistoryLineItem>
+          </WorkHistoryLineGroup>
+
+        </WorkHistory>
+
+        <WorkHistory
+            name="Matrix Networks"
+            start="2008"
+            end="2015"
+            title="Engineering Supervisor and Marketing Support"
+        >
+          <p>At Matrix Networks I helped build and maintain their customer facing website, many intranet projects for live monitoring of network assets, and captive portals for on-site equipment. Also acted as the engineering leader for the hospitality internet department.</p>
+
+          <WorkHistoryLineGroup>
+            <WorkHistoryLineItem>Web & print assets</WorkHistoryLineItem>
+            <WorkHistoryLineItem>Engineer supervisor</WorkHistoryLineItem>
+            <WorkHistoryLineItem>Project management</WorkHistoryLineItem>
+            <WorkHistoryLineItem>Networking Tech/Engineer</WorkHistoryLineItem>
+            <WorkHistoryLineItem>Website and portal analytics</WorkHistoryLineItem>
           </WorkHistoryLineGroup>
 
         </WorkHistory>
@@ -152,7 +170,7 @@ export default App;
 
 function ProfileTitle({ title, icon }) {
   return (
-    <div className="title uppercase px-5 border-r-2 flex last-of-type:border-r-0 border-stone-400 font-bold text-sm tracking-wide">
+    <div className="title uppercase px-5 border-r-2 flex last-of-type:border-r-0 border-stone-400 font-extrabold text-sm tracking-wide">
       <h3>{title}</h3>
     </div>
   );
@@ -199,7 +217,7 @@ function SkillsSecondary() {
 
 function Section({ children, classes, container = true }) {
   return (
-    <section className={classes + " mt-10"}>
+    <section className={classes + " mt-14"}>
       <div className="container max-w-screen-xl mx-auto px-5">{children}</div>
     </section>
   )
@@ -224,7 +242,7 @@ function WorkHistory({ name, website, url, start, end, title, children }) {
             </h5>
         }
       </div>
-      <h4 className="work-history__title text-lg uppercase font-bold">{title}</h4>
+      <h4 className="work-history__title uppercase font-extrabold text-slate-700">{title}</h4>
       <div className="work-history__timeline mb-3">
         <strong>{start} - {end}</strong>
       </div>
