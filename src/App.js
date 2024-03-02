@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import { skills } from './skills.js';
 import iconPhone from './images/square-phone-solid.svg'
@@ -9,7 +10,7 @@ import iconGitHub from './images/square-github.svg'
 
 function App() {
   return (
-    <div className="main bg-gray-300 pb-10">
+    <div className="main bg-gray-300" id="app">
 
       <header className="header pt-10 text-gray-700">
         <div className="container mx-auto">
@@ -66,8 +67,12 @@ function App() {
 
       <Section classes="skills">
         <SectionHeading>Skills and Technologies:</SectionHeading>
-        <Skills />
-        <SkillsSecondary />
+        <Skills
+          filterType="primary"
+        />
+        <Skills
+          filterType="secondary"
+        />
       </Section>
 
       <Section classes="what-i-can-do">
@@ -81,11 +86,11 @@ function App() {
 
         <p>My expertise spans both creative and technical aspects, enabling me to quickly conceptualize and execute solutions. I am adaptable and keen on learning to expand my skill sets and stay updated with evolving web technologies, allowing me to quickly research and adopt new tools, methods, frameworks and tech stacks.</p>
 
-        <p>IM LOOKING FOR... Either a website to build and own with a marketing team or to work alongside a team of developers. My current role involves quickly relaunching sites and sending them off to clients, I feel my expertise could shine on fewer projects and utilize the culmination of my experience and implemented features. Marketing teams are where I’ve had the most experience but I can comfortably work alongside back-end and other front-end developers.</p>
+        <p><strong>IM LOOKING FOR...</strong><br/>Either a website to build and own with a marketing team or to work alongside a team of developers. My current role involves quickly relaunching sites and sending them off to clients, I feel my expertise could shine on fewer projects and utilize the culmination of my experience and implemented features. Marketing teams are where I’ve had the most experience but I can comfortably work alongside back-end and other front-end developers.</p>
       </Section>
 
       <Section classes="portfolio bg-stone-950 text-white py-16 text-center mt-10 text-lg">
-        <h2 className="text-3xl uppercase font-bold mb-8">A note on my Portfolio:</h2>
+        <h2 className="text-3xl uppercase mb-8">A note on my Portfolio:</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -161,6 +166,11 @@ function App() {
         </WorkHistory>
       </Section>
 
+      <Section classes="footer bg-stone-950 text-white py-16 text-center mt-10 text-lg mb-0">
+        <h2 className="text-3xl mb-0.5"><em>Thank You!</em></h2>
+        <a href="#app" class="uppercase tracking-wider font-bold mt-0.5 text-sm opacity-75">Back to top</a>
+      </Section>
+
     </div>
   );
 }
@@ -195,24 +205,31 @@ function ProfileInfo({ content, icon, url }) {
   );
 }
 
-function Skills() {
-  const primarySkills = skills.filter(skill =>
-    skill.type === 'primary'
-  );
-  const listItems = primarySkills.map(skill =>
-    <li key={skill.id} className="mr-5">{skill.name}</li>
-  );
-  return <ul className="text-xl font-semibold flex flex-wrap">{listItems}</ul>
-}
+function Skills( {filterType} ) {
+  const primarySkills = skills.filter(skill => skill.type === filterType);
+  const [listItems, setListItems] = useState(primarySkills);
 
-function SkillsSecondary() {
-  const secondarySkills = skills.filter(skill =>
-    skill.type === 'secondary'
+  function sortByAlphabetically() {
+    const sortedList = [...listItems].sort((a, b) => a.name.localeCompare(b.name));
+    setListItems(sortedList);
+  }
+
+  function sortByID() {
+    const sortedList = [...listItems].sort((a, b) => a.id - b.id);
+    setListItems(sortedList);
+  }
+
+  return (
+      <>
+        <button onClick={sortByAlphabetically}>Sort Alphabetically</button>
+        <button onClick={sortByID}>Sort by ID</button>
+        <ul className={`font-semibold flex flex-wrap ${filterType === 'primary' ? 'text-xl' : ''}`}>
+          {listItems.map(skill => (
+              <li key={skill.id} className="mr-5">{skill.name}</li>
+          ))}
+        </ul>
+      </>
   );
-  const listItems = secondarySkills.map(skill =>
-    <li key={skill.id} className="mr-5">{skill.name}</li>
-  );
-  return <ul className="flex flex-wrap mt-5">{listItems}</ul>
 }
 
 function Section({ children, classes, container = true }) {
@@ -260,6 +277,6 @@ function WorkHistoryLineGroup({ children }) {
 }
 function WorkHistoryLineItem({ children }) {
   return (
-    <li className="text-sm mt-1 mb-1">{children}</li>
+    <li className="text-md mt-1 mb-1">{children}</li>
   )
 }
