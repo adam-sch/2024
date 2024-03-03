@@ -149,7 +149,7 @@ function App() {
 
       <Section classes="footer bg-stone-950 text-white py-16 text-center mt-10 text-lg mb-0">
         <h2 className="text-3xl mb-0.5"><em>Thank You!</em></h2>
-        <a href="#app" class="uppercase tracking-wider font-bold mt-0.5 text-sm opacity-75">Back to top</a>
+        <a href="#app" className="uppercase tracking-wider font-bold mt-0.5 text-sm opacity-75">Back to top</a>
       </Section>
 
     </div>
@@ -186,7 +186,7 @@ function InfoBar({ children }) {
   )
 }
 
-function ProfileTitle({title, icon}) {
+function ProfileTitle({title}) {
   return (
     <div
       className="title uppercase px-5 border-r-2 flex last-of-type:border-r-0 border-stone-400 font-extrabold text-sm tracking-wide [&:nth-of-type(2)>h3]:animation-delay-300 [&:nth-of-type(3)>h3]:animation-delay-500 [&:nth-of-type(4)>h3]:animation-delay-700">
@@ -241,7 +241,7 @@ function Skills( {filterType} ) {
   );
 }
 
-function Section({ children, classes, container = true }) {
+function Section({ children, classes }) {
   return (
     <section className={classes + " mt-14"}>
       <div className="container max-w-screen-xl mx-auto px-5">{children}</div>
