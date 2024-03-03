@@ -70,7 +70,7 @@ function App() {
         <p><strong>IM LOOKING FOR...</strong><br/>Either a website to build and own with a marketing team or to work alongside a team of developers. My current role involves quickly relaunching sites and sending them off to clients, I feel my expertise could shine on fewer projects and utilize the culmination of my experience and implemented features. Marketing teams are where I’ve had the most experience but I can comfortably work alongside back-end and other front-end developers.</p>
       </Section>
 
-      <Section classes="portfolio bg-stone-950 text-white py-16 text-center mt-10 text-lg">
+      <Section classes="portfolio bg-custom-dark-slate text-white py-16 text-center mt-10 text-lg">
         <h2 className="text-3xl uppercase mb-8">A note on my Portfolio:</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -147,7 +147,7 @@ function App() {
         </WorkHistory>
       </Section>
 
-      <Section classes="footer bg-stone-950 text-white py-16 text-center mt-10 text-lg mb-0">
+      <Section classes="footer bg-custom-dark-slate text-white py-16 text-center mt-10 text-lg !mb-0">
         <h2 className="text-3xl mb-0.5"><em>Thank You!</em></h2>
         <a href="#app" className="uppercase tracking-wider font-bold mt-0.5 text-sm opacity-75">Back to top</a>
       </Section>
@@ -163,7 +163,7 @@ function Header({ children, name = true }) {
   return (
     <header className="header pt-10 text-gray-700">
       <div className="container mx-auto">
-        <h1 className="header__heading text-5xl font-bold text-center font-serif mt-3">
+        <h1 className="header__heading text-5xl font-semibold text-center font-serif mt-3 tracking-wide">
           {name}
         </h1>
         <div className="header__title-group flex justify-center py-7 mb-2">
@@ -178,7 +178,7 @@ function InfoBar({ children }) {
   return (
     <div className="profile-info">
       <div className="container mx-auto">
-        <div className="profile-info__bar bg-gray-700 py-5 px-10 rounded-md size-full flex justify-center">
+        <div className="profile-info__bar bg-custom-dark-slate py-5 px-10 rounded-md size-full flex justify-center">
           {children}
         </div>
       </div>
@@ -243,7 +243,7 @@ function Skills( {filterType} ) {
 
 function Section({ children, classes }) {
   return (
-    <section className={classes + " mt-14"}>
+    <section className={"mt-10 mb-14 " + classes}>
       <div className="container max-w-screen-xl mx-auto px-5">{children}</div>
     </section>
   )
@@ -251,7 +251,7 @@ function Section({ children, classes }) {
 
 function SectionHeading({ children, classes }) {
   return (
-    <h2 className={classes + " text-2xl font-bold py-2 mb-2 border-b-2 border-gray-400 font-serif text-gray-700"}>
+    <h2 className={classes + " text-2xl font-bold py-2 mb-2 border-b-2 border-gray-400 font-serif text-custom-dark-slate"}>
       {children}
     </h2>
   )

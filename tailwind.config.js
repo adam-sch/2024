@@ -18,6 +18,11 @@ module.exports = {
       },
       animation: {
         bounceInFade: 'bounceInFade 0.35s ease forwards',
+      },
+      colors: {
+        'custom-light-blue': '#0096d0',
+        'custom-dark-blue': '#032633',
+        'custom-dark-slate': '#1c2022'
       }
     },
   },
