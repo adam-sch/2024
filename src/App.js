@@ -8,62 +8,43 @@ import iconMap from './images/map-location-dot-solid.svg'
 import iconGitHub from './images/square-github.svg'
 
 
+
 function App() {
   return (
     <div className="main bg-gray-300" id="app">
 
-      <header className="header pt-10 text-gray-700">
-        <div className="container mx-auto">
-          <h1 className="header__heading text-5xl font-bold text-center font-serif mt-3">
-            Adam Schlabach
-          </h1>
+      <Header name="Adam Schlabach">
+        <ProfileTitle title="VP of Engineering" />
+        <ProfileTitle title="Corporate Website Manager" />
+        <ProfileTitle title="Front-end Developer" />
+        <ProfileTitle title="All Things B2B Website" />
+      </Header>
 
-          <div className="header__title-group flex justify-center py-7 mb-2">
-            <ProfileTitle
-              title="VP of Engineering"
-            />
-            <ProfileTitle
-              title="Corporate Website Manager"
-            />
-            <ProfileTitle
-              title="Front-end Developer"
-            />
-            <ProfileTitle
-              title="All Things B2B Website"
-            />
-          </div>
-        </div>
-      </header>
-
-      <div className="profile-info">
-        <div className="container mx-auto">
-          <div className="profile-info__bar bg-gray-700 py-5 px-10 rounded-md size-full flex justify-center">
-            <ProfileInfo
-              icon={iconPhone}
-              content="503.970.0038"
-            />
-            <ProfileInfo
-              icon={iconMail}
-              content="adam.schlabach@gmail.com"
-              url="mailto:adam.schlabach@gmail.com"
-            />
-            <ProfileInfo
-              icon={iconLinkedIn}
-              content="adamschlabach"
-              url="https://www.linkedin.com/in/adamschlabach/"
-            />
-            <ProfileInfo
-              icon={iconGitHub}
-              content="adam-sch"
-              url="https://github.com/adam-sch"
-            />
-            <ProfileInfo
-              icon={iconMap}
-              content="Portland, OR"
-            />
-          </div>
-        </div>
-      </div>
+      <InfoBar>
+        <ProfileInfo
+          icon={iconPhone}
+          content="503.970.0038"
+        />
+        <ProfileInfo
+          icon={iconMail}
+          content="adam.schlabach@gmail.com"
+          url="mailto:adam.schlabach@gmail.com"
+        />
+        <ProfileInfo
+          icon={iconLinkedIn}
+          content="adamschlabach"
+          url="https://www.linkedin.com/in/adamschlabach/"
+        />
+        <ProfileInfo
+          icon={iconGitHub}
+          content="adam-sch"
+          url="https://github.com/adam-sch"
+        />
+        <ProfileInfo
+          icon={iconMap}
+          content="Portland, OR"
+        />
+      </InfoBar>
 
       <Section classes="skills">
         <SectionHeading>Skills and Technologies:</SectionHeading>
@@ -178,19 +159,47 @@ function App() {
 export default App;
 
 
-function ProfileTitle({ title, icon }) {
+function Header({ children, name = true }) {
   return (
-    <div className="title uppercase px-5 border-r-2 flex last-of-type:border-r-0 border-stone-400 font-extrabold text-sm tracking-wide [&:nth-of-type(2)>h3]:animation-delay-300 [&:nth-of-type(3)>h3]:animation-delay-500 [&:nth-of-type(4)>h3]:animation-delay-700">
+    <header className="header pt-10 text-gray-700">
+      <div className="container mx-auto">
+        <h1 className="header__heading text-5xl font-bold text-center font-serif mt-3">
+          {name}
+        </h1>
+        <div className="header__title-group flex justify-center py-7 mb-2">
+          {children}
+        </div>
+      </div>
+    </header>
+  )
+}
+
+function InfoBar({ children }) {
+  return (
+    <div className="profile-info">
+      <div className="container mx-auto">
+        <div className="profile-info__bar bg-gray-700 py-5 px-10 rounded-md size-full flex justify-center">
+          {children}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function ProfileTitle({title, icon}) {
+  return (
+    <div
+      className="title uppercase px-5 border-r-2 flex last-of-type:border-r-0 border-stone-400 font-extrabold text-sm tracking-wide [&:nth-of-type(2)>h3]:animation-delay-300 [&:nth-of-type(3)>h3]:animation-delay-500 [&:nth-of-type(4)>h3]:animation-delay-700">
       <h3 className="animate-bounceInFade opacity-0 animation-delay-100">{title}</h3>
     </div>
   );
 }
 
-function ProfileInfo({ content, icon, url }) {
+function ProfileInfo({content, icon, url}) {
   return (
     <div className="info text-white px-5 border-r-2 flex content-center last-of-type:border-r-0 border-slate-500">
       <div className="info__media max-w-8">
-        <img src={icon} alt={content} className="size-full pr-2" />
+        <img src={icon} alt={content} className="size-full pr-2"/>
       </div>
       <h3 className="text-nowrap flex items-center font-bold tracking-wide">
         {url ? (
@@ -201,8 +210,8 @@ function ProfileInfo({ content, icon, url }) {
           content
         )}
       </h3>
-    </div>
-  );
+  </div>
+);
 }
 
 function Skills( {filterType} ) {
@@ -220,15 +229,15 @@ function Skills( {filterType} ) {
   }
 
   return (
-      <div className="skills mb-5 last-of-type:mb-0">
-        <ul className={`font-semibold flex flex-wrap ${filterType === 'primary' ? 'text-xl' : ''}`}>
-          {listItems.map(skill => (
-              <li key={skill.id} className="mr-5">{skill.name}</li>
-          ))}
-        </ul>
-        <button className="uppercase tracking-wider text-xs font-bold opacity-70 mr-5" onClick={sortByAlphabetically}>Sort Alphabetically</button>
-        <button className="uppercase tracking-wider text-xs font-bold opacity-70 mr-5" onClick={sortByID}>Sort by ID</button>
-      </div>
+    <div className="skills mb-5 last-of-type:mb-0">
+      <ul className={`font-semibold flex flex-wrap ${filterType === 'primary' ? 'text-xl' : ''}`}>
+        {listItems.map(skill => (
+            <li key={skill.id} className="mr-5">{skill.name}</li>
+        ))}
+      </ul>
+      <button className="uppercase tracking-wider text-xs font-bold opacity-70 mr-5" onClick={sortByAlphabetically}>Sort Alphabetically</button>
+      <button className="uppercase tracking-wider text-xs font-bold opacity-70 mr-5" onClick={sortByID}>Sort by ID</button>
+    </div>
   );
 }
 
@@ -254,9 +263,9 @@ function WorkHistory({ name, website, url, start, end, title, children }) {
       <div className="work-history__heading flex align-center content-end">
         <h3 className="text-2xl">{name}</h3>
         {website &&
-            <h5 className="flex align-bottom content-end flex-wrap ml-2 mb-0.5">
-              (<a href={url} target="_blank" rel="noreferrer" className="text-sky-600">{website}</a>)
-            </h5>
+          <h5 className="flex align-bottom content-end flex-wrap ml-2 mb-0.5">
+            (<a href={url} target="_blank" rel="noreferrer" className="text-sky-600">{website}</a>)
+          </h5>
         }
       </div>
       <h4 className="work-history__title uppercase font-extrabold text-slate-700">{title}</h4>
