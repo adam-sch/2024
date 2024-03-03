@@ -220,15 +220,15 @@ function Skills( {filterType} ) {
   }
 
   return (
-      <>
-        <button onClick={sortByAlphabetically}>Sort Alphabetically</button>
-        <button onClick={sortByID}>Sort by ID</button>
+      <div className="skills mb-5 last-of-type:mb-0">
         <ul className={`font-semibold flex flex-wrap ${filterType === 'primary' ? 'text-xl' : ''}`}>
           {listItems.map(skill => (
               <li key={skill.id} className="mr-5">{skill.name}</li>
           ))}
         </ul>
-      </>
+        <button className="uppercase tracking-wider text-xs font-bold opacity-70 mr-5" onClick={sortByAlphabetically}>Sort Alphabetically</button>
+        <button className="uppercase tracking-wider text-xs font-bold opacity-70 mr-5" onClick={sortByID}>Sort by ID</button>
+      </div>
   );
 }
 
