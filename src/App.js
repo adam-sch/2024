@@ -161,12 +161,12 @@ export default App;
 
 function Header({ children, name = true }) {
   return (
-    <header className="header pt-10 text-gray-700">
-      <div className="container mx-auto">
+    <header className="header pt-10 text-custom-dark-blue">
+      <div className="container mx-auto px-5">
         <h1 className="header__heading text-5xl font-semibold text-center font-serif mt-3 tracking-wide">
           {name}
         </h1>
-        <div className="header__title-group flex justify-center py-7 mb-2">
+        <div className="header__title-group flex flex-wrap justify-center text-center py-7 mb-2">
           {children}
         </div>
       </div>
@@ -174,11 +174,20 @@ function Header({ children, name = true }) {
   )
 }
 
+function ProfileTitle({title}) {
+  return (
+    <div
+      className="title uppercase px-2 sm:px-5 py-1 lg:py-0 lg:border-r-2 flex last-of-type:border-r-0 border-stone-400 font-extrabold text-sm tracking-wide [&:nth-of-type(2)>h3]:animation-delay-300 [&:nth-of-type(3)>h3]:animation-delay-500 [&:nth-of-type(4)>h3]:animation-delay-700">
+      <h3 className="animate-bounceInFade opacity-0 animation-delay-100">{title}</h3>
+    </div>
+  );
+}
+
 function InfoBar({ children }) {
   return (
-    <div className="profile-info">
+    <div className="infobar">
       <div className="container mx-auto">
-        <div className="profile-info__bar bg-custom-dark-slate py-5 px-10 rounded-md size-full flex justify-center">
+        <div className="infobar__bar bg-custom-dark-slate py-5 lg:px-10 rounded-md size-full flex flex-wrap justify-center">
           {children}
         </div>
       </div>
@@ -186,18 +195,9 @@ function InfoBar({ children }) {
   )
 }
 
-function ProfileTitle({title}) {
-  return (
-    <div
-      className="title uppercase px-5 border-r-2 flex last-of-type:border-r-0 border-stone-400 font-extrabold text-sm tracking-wide [&:nth-of-type(2)>h3]:animation-delay-300 [&:nth-of-type(3)>h3]:animation-delay-500 [&:nth-of-type(4)>h3]:animation-delay-700">
-      <h3 className="animate-bounceInFade opacity-0 animation-delay-100">{title}</h3>
-    </div>
-  );
-}
-
 function ProfileInfo({content, icon, url}) {
   return (
-    <div className="info text-white px-5 border-r-2 flex content-center last-of-type:border-r-0 border-slate-500">
+    <div className="info text-white px-5 my-2 lg:border-r-2 w-full sm:w-auto flex justify-center content-center last-of-type:border-r-0 border-slate-500">
       <div className="info__media max-w-8">
         <img src={icon} alt={content} className="size-full pr-2"/>
       </div>
@@ -230,9 +230,9 @@ function Skills( {filterType} ) {
 
   return (
     <div className="skills mb-5 last-of-type:mb-0">
-      <ul className={`font-semibold flex flex-wrap ${filterType === 'primary' ? 'text-xl' : ''}`}>
+      <ul className={`flex flex-wrap ${filterType === 'primary' ? 'md:text-xl font-bold' : 'font-semibold text-sm sm:text-base'}`}>
         {listItems.map(skill => (
-            <li key={skill.id} className="mr-5">{skill.name}</li>
+            <li key={skill.id} className="mr-5 ">{skill.name}</li>
         ))}
       </ul>
       <button className="uppercase tracking-wider text-xs font-bold opacity-70 mr-5" onClick={sortByAlphabetically}>Sort Alphabetically</button>
@@ -244,7 +244,7 @@ function Skills( {filterType} ) {
 function Section({ children, classes }) {
   return (
     <section className={"mt-10 mb-14 " + classes}>
-      <div className="container max-w-screen-xl mx-auto px-5">{children}</div>
+      <div className="container lg:max-w-screen-xl mx-auto px-5">{children}</div>
     </section>
   )
 }
