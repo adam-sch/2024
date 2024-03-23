@@ -59,6 +59,20 @@ function App() {
       <Section classes="what-i-can-do">
         <SectionHeading>What I can do:</SectionHeading>
 
+        <CanDoLineGroup>
+          <CanDoLineItem>Gather requirements and research solutions for projects.</CanDoLineItem>
+          <CanDoLineItem>Design and maintain scalable website front-end infrastructure and all aspects of corporate websites.</CanDoLineItem>
+          <CanDoLineItem>Work within existing codebases and conform to coding standards.</CanDoLineItem>
+          <CanDoLineItem>Design user friendly UX with React, SASS and/or Tailwind, HTML5, and other front end technologies, frameworks and CI/CD solutions.</CanDoLineItem>
+          <CanDoLineItem>Quickly pick up new tech stacks and best practices.</CanDoLineItem>
+          <CanDoLineItem>Optimize React applications and efficiently manage state.</CanDoLineItem>
+          <CanDoLineItem>Optimize website performance and Page Speed Insight scores.</CanDoLineItem>
+          <CanDoLineItem>Work alongside technical, non-technical, and creative teams while helping bridge communications.</CanDoLineItem>
+          <CanDoLineItem>Work within Javascript frameworks or high-standards WordPress.</CanDoLineItem>
+          <CanDoLineItem>Turn designs into semantic, responsive, scalable and maintainable websites.</CanDoLineItem>
+          <CanDoLineItem>Deliver quality of work expected in large, publicly traded organizations.</CanDoLineItem>
+          <CanDoLineItem>Manage team of engineers and developers, code reviews and standards enforcement.</CanDoLineItem>
+        </CanDoLineGroup>
       </Section>
 
       <Section classes="about">
@@ -72,9 +86,9 @@ function App() {
 
       <Section classes="portfolio bg-custom-dark-slate text-white py-16 text-center mt-10 text-lg">
         <h2 className="text-3xl uppercase mb-8">A note on my Portfolio:</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>For the last eight years I have been operating under <strong>Non Disclosure Agreements</strong> which limits my work examples, however the caliber of sites and clients I currently work with can be found at atre.net/clients. As VP of Engineering I am still very hands-on with projects and had a heavy hand in many of our client sites. I was also utilized for any architecture concerns, complex front end builds and high visibility projects. On top of the B2B corporate sites, I’ve also had a hand in internal and private applications.</p>
+
+        <p>This résumé itself can be viewed as an example via the source code on github here. This app utilizes some straightforward core React examples, Tailwind, and a simple deploy-from-git. Of course there are many more elements and levels of detail that would go into a real production site that I am experienced with but outside the scope of this application.</p>
       </Section>
 
       <Section classes="work-history">
@@ -244,7 +258,7 @@ function Skills( {filterType} ) {
 function Section({ children, classes }) {
   return (
     <section className={"mt-10 mb-14 " + classes}>
-      <div className="container lg:max-w-screen-xl mx-auto px-5">{children}</div>
+      <div className="container lg:max-w-screen-lg mx-auto px-5">{children}</div>
     </section>
   )
 }
@@ -282,10 +296,23 @@ function WorkHistoryLineGroup({ children }) {
     <ul className="work-history__line-items marker:text-sky-400 list-outside list-disc ml-6">
       {children}
     </ul>
-    )
+  )
 }
 function WorkHistoryLineItem({ children }) {
   return (
     <li className="text-md mt-1 mb-1">{children}</li>
+  )
+}
+
+function CanDoLineGroup({ children }) {
+  return (
+    <ul className="can-do__line-items marker:text-sky-400 list-outside list-disc ml-6">
+      {children}
+    </ul>
+  )
+}
+function  CanDoLineItem({ children }) {
+  return (
+    <li className="text-lg mt-1 mb-1">{children}</li>
   )
 }
