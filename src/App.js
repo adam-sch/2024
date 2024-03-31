@@ -91,9 +91,9 @@ function App() {
 
       <Section classes="portfolio bg-custom-dark-slate text-white py-16 text-center mt-10 text-lg">
         <h2 className="text-3xl uppercase mb-8">A note on my Portfolio:</h2>
-        <p>For the last eight years I have been operating under <strong>Non Disclosure Agreements</strong> which limits my work examples, however the caliber of sites and clients I currently work with can be found at <a href="https://atre.net/clients" target="_blank" rel="noreferrer">atre.net/clients</a>. As VP of Engineering I am still very hands-on with projects and had a heavy hand in many of our client sites. I was also utilized for any architecture concerns, complex front end builds and high visibility projects. On top of the B2B corporate sites, I’ve also had a hand in internal and private applications.</p>
+        <p>For the last eight years I have been operating under <strong>Non Disclosure Agreements</strong> which limits my work examples, however the caliber of sites and clients I currently work with can be found at <a href="https://atre.net/clients" target="_blank" rel="noreferrer" className="underline">atre.net/clients</a>. As VP of Engineering I am still very hands-on with projects and had a heavy hand in many of our client sites. I was also utilized for any architecture concerns, complex front end builds and high visibility projects. On top of the B2B corporate sites, I’ve also had a hand in internal and private applications.</p>
 
-        <p>This résumé itself can be viewed as an example via the source code on github <a href="https://github.com/adam-sch/2024/tree/main/src" target="_blank" rel="noreferrer">here</a>. This app utilizes some straightforward core React examples, Tailwind, and a simple deploy-from-git. Of course there are many more elements and levels of detail that would go into a real production site that I am experienced with but outside the scope of this application. Please also note that the majority of my git contributions are outside of GitHub on private repositories like Pantheon.</p>
+        <p>This résumé itself can be viewed as an example via the source code on github <a href="https://github.com/adam-sch/2024/tree/main/src" target="_blank" rel="noreferrer" className="underline">here</a>. This app utilizes some straightforward core React examples, Tailwind, and a simple deploy-from-git. Of course there are many more elements and levels of detail that would go into a real production site that I am experienced with but outside the scope of this application. Please also note that the majority of my git contributions are outside of GitHub on private repositories like Pantheon.</p>
       </Section>
 
       <Section classes="work-history">
@@ -105,7 +105,7 @@ function App() {
           url="https://atre.net"
           start="2016"
           end="present"
-          title="VP of Engineering"
+          title="Senior Engineer -> Director of Engineering -> VP of Engineering"
         >
           <p>At AtreNet I’ve been working as the leader of the engineering department as well as being actively involved with development work. As is the nature for smaller companies I’ve had to embrace performing across a spectrum of responsibilities and aspects of building and maintaining corporate websites.</p>
 
