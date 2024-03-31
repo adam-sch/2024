@@ -26,42 +26,42 @@ export const skills = [
 	},
 	{
 		"id": 6,
-		"name": "CSS & SVG Animations",
+		"name": "WordPress",
 		"type": "primary"
 	},
 	{
 		"id": 7,
-		"name": "UI/UX",
+		"name": "CSS & SVG Animations",
 		"type": "primary"
 	},
 	{
 		"id": 8,
-		"name": "Photoshop/XD/Figma",
+		"name": "UI/UX",
 		"type": "primary"
 	},
 	{
 		"id": 9,
-		"name": "Responsive Design",
+		"name": "Photoshop/XD/Figma",
 		"type": "primary"
 	},
 	{
 		"id": 10,
-		"name": "Performance Optimization",
+		"name": "Responsive Design",
 		"type": "primary"
 	},
 	{
 		"id": 11,
-		"name": "Website Workflows",
+		"name": "Performance Optimization",
 		"type": "primary"
 	},
 	{
 		"id": 12,
-		"name": "CI/CD",
+		"name": "Website Workflows",
 		"type": "primary"
 	},
 	{
 		"id": 13,
-		"name": "WordPress",
+		"name": "CI/CD",
 		"type": "primary"
 	},
 	{
@@ -86,77 +86,142 @@ export const skills = [
 	},
 	{
 		"id": 18,
-		"name": "AI (ChatGPT, Bard, MidJourney, StableDiffusion)",
-		"type": "secondary"
+		"name": "Pantheon",
+		"type": "primary"
 	},
 	{
 		"id": 19,
-		"name": "PHP",
-		"type": "secondary"
+		"name": "WPEngine",
+		"type": "primary"
 	},
 	{
 		"id": 20,
-		"name": "Illustrator",
-		"type": "secondary"
+		"name": "Netlify",
+		"type": "primary"
 	},
 	{
 		"id": 21,
-		"name": "After Effects",
+		"name": "AI/Prompt Engineering",
 		"type": "secondary"
 	},
 	{
 		"id": 22,
-		"name": "Git and GitHub Actions",
+		"name": "SEO",
 		"type": "secondary"
 	},
 	{
 		"id": 23,
-		"name": "Website concepting & strategy",
+		"name": "RESTful API",
 		"type": "secondary"
 	},
 	{
 		"id": 24,
-		"name": "Marketing campaigns",
+		"name": "TypeScript",
 		"type": "secondary"
 	},
 	{
 		"id": 25,
-		"name": "Google Analytics (UA, GA4)",
+		"name": "PHP",
 		"type": "secondary"
 	},
 	{
 		"id": 26,
-		"name": "Website security",
+		"name": "Illustrator",
 		"type": "secondary"
 	},
 	{
 		"id": 27,
-		"name": "AI Prompts",
+		"name": "After Effects",
 		"type": "secondary"
 	},
 	{
 		"id": 28,
-		"name": "Lottie.js",
+		"name": "GitHub Actions",
 		"type": "secondary"
 	},
 	{
 		"id": 29,
-		"name": "Localization/WPML",
+		"name": "Website Concepting & Strategy",
 		"type": "secondary"
 	},
 	{
 		"id": 30,
-		"name": "GDPR Compliance",
+		"name": "Marketing Campaign Technical Support",
 		"type": "secondary"
 	},
 	{
 		"id": 31,
-		"name": "QA Workflows",
+		"name": "Google Analytics (UA, GA4)",
 		"type": "secondary"
 	},
 	{
 		"id": 32,
+		"name": "Website Security",
+		"type": "secondary"
+	},
+	{
+		"id": 33,
+		"name": "Lottie.js",
+		"type": "secondary"
+	},
+	{
+		"id": 34,
+		"name": "Localization/WPML",
+		"type": "secondary"
+	},
+	{
+		"id": 35,
+		"name": "GDPR Compliance",
+		"type": "secondary"
+	},
+	{
+		"id": 36,
+		"name": "QA Workflows",
+		"type": "secondary"
+	},
+	{
+		"id": 37,
 		"name": "MySQL/MongoDB",
+		"type": "secondary"
+	},
+	{
+		"id": 38,
+		"name": "Drupal",
+		"type": "secondary"
+	},
+	{
+		"id": 39,
+		"name": "nodeJS",
+		"type": "secondary"
+	},
+	{
+		"id": 40,
+		"name": "Webpack",
+		"type": "secondary"
+	},
+	{
+		"id": 41,
+		"name": "Project Management",
+		"type": "secondary"
+	},
+	{
+		"id": 42,
+		"name": "AWS",
+		"type": "secondary"
+	},
+	{
+		"id": 43,
+		"name": "DeployBot",
+		"type": "secondary"
+	},
+	{
+		"id": 44,
+		"name": "DeployHQ",
+		"type": "secondary"
+	},
+	{
+		"id": 45,
+		"name": "DNS",
 		"type": "secondary"
 	}
 ]
