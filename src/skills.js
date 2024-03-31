@@ -225,5 +225,3 @@ export const skills = [
 		"type": "secondary"
 	}
 ]
-
-
