@@ -13,11 +13,16 @@ function App() {
   return (
     <div className="main bg-gray-300" id="app">
 
-      <Header name="Adam Schlabach">
-        <ProfileTitle title="VP of Engineering" />
-        <ProfileTitle title="Corporate Website Manager" />
-        <ProfileTitle title="Front-end Developer" />
-        <ProfileTitle title="All Things B2B Website" />
+      <Header>
+        <h1 className="header__heading text-5xl text-center font-serif mt-3">
+          Adam <strong>Schlabach</strong>
+        </h1>
+        <HeaderTitleGroup>
+          <HeaderTitle title="VP of Engineering"/>
+          <HeaderTitle title="Corporate Website Manager"/>
+          <HeaderTitle title="Front-end Developer"/>
+          <HeaderTitle title="All Things B2B Website"/>
+        </HeaderTitleGroup>
       </Header>
 
       <InfoBar>
@@ -47,7 +52,7 @@ function App() {
       </InfoBar>
 
       <Section classes="skills">
-        <SectionHeading>Skills and Technologies:</SectionHeading>
+        <SectionHeading>Skills, Technologies, Frameworks and Services:</SectionHeading>
         <Skills
           filterType="primary"
         />
@@ -173,22 +178,25 @@ function App() {
 export default App;
 
 
-function Header({ children, name = true }) {
+function Header({ children }) {
   return (
     <header className="header pt-10 text-custom-dark-blue">
       <div className="container mx-auto px-5">
-        <h1 className="header__heading text-5xl font-semibold text-center font-serif mt-3 tracking-wide">
-          {name}
-        </h1>
-        <div className="header__title-group flex flex-wrap justify-center text-center py-7 mb-2">
-          {children}
-        </div>
+        {children}
       </div>
     </header>
   )
 }
 
-function ProfileTitle({title}) {
+function HeaderTitleGroup({ children }) {
+  return (
+    <div className="header__title-group flex flex-wrap justify-center text-center py-7 mb-2">
+      {children}
+    </div>
+  )
+}
+
+function HeaderTitle({title}) {
   return (
     <div
       className="title uppercase px-2 sm:px-5 py-1 lg:py-0 lg:border-r-2 flex last-of-type:border-r-0 border-stone-400 font-extrabold text-sm tracking-wide [&:nth-of-type(2)>h3]:animation-delay-300 [&:nth-of-type(3)>h3]:animation-delay-500 [&:nth-of-type(4)>h3]:animation-delay-700">
