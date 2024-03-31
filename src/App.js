@@ -65,14 +65,14 @@ function App() {
         <SectionHeading>What I can do:</SectionHeading>
 
         <CanDoLineGroup>
-          <CanDoLineItem>Gather requirements and research solutions for projects.</CanDoLineItem>
-          <CanDoLineItem>Design and maintain scalable website front-end infrastructure and all aspects of corporate websites.</CanDoLineItem>
-          <CanDoLineItem>Work within existing codebases and conform to coding standards.</CanDoLineItem>
-          <CanDoLineItem>Design user friendly UX with React, SASS and/or Tailwind, HTML5, and other front end technologies, frameworks and CI/CD solutions.</CanDoLineItem>
+          <CanDoLineItem>Gather requirements, research and implement ideal solutions for projects.</CanDoLineItem>
+          <CanDoLineItem>Design, develop and maintain scalable website front-end infrastructure and all aspects of corporate websites.</CanDoLineItem>
+          <CanDoLineItem>Design and develop user friendly UX with React, SASS and/or Tailwind, HTML5, and other front end technologies, frameworks and CI/CD solutions.</CanDoLineItem>
           <CanDoLineItem>Quickly pick up new tech stacks and best practices.</CanDoLineItem>
+          <CanDoLineItem>Work within existing codebases and conform to coding standards.</CanDoLineItem>
           <CanDoLineItem>Optimize React applications and efficiently manage state.</CanDoLineItem>
-          <CanDoLineItem>Optimize website performance and Page Speed Insight scores.</CanDoLineItem>
-          <CanDoLineItem>Work alongside technical, non-technical, and creative teams while helping bridge communications.</CanDoLineItem>
+          <CanDoLineItem>Optimize website performance, load times and Page Speed Insight scores.</CanDoLineItem>
+          <CanDoLineItem>Work alongside technical, non-technical, and creative/marketing teams while helping bridge technical communications.</CanDoLineItem>
           <CanDoLineItem>Work within Javascript frameworks or high-standards WordPress.</CanDoLineItem>
           <CanDoLineItem>Turn designs into semantic, responsive, scalable and maintainable websites.</CanDoLineItem>
           <CanDoLineItem>Deliver quality of work expected in large, publicly traded organizations.</CanDoLineItem>
@@ -82,11 +82,11 @@ function App() {
 
       <Section classes="about">
         <SectionHeading>A little about me:</SectionHeading>
-        <p>I have a strong background in website development with a core focus on marketing-driven corporate websites. In my current role I work almost exclusively alongside marketing teams from just-funded and maybe a bit overwhelmed startups to CMOs of mature publicly traded companies to build, manage and maintain their web presence.</p>
+        <p>I have a strong background in website development with a focus on marketing-driven B2B corporate websites. In my current role I manage a team of developers to work alongside marketing teams from just-funded (and maybe a bit overwhelmed) startups to CMOs of mature publicly traded companies to build, manage and maintain their web presence.</p>
 
-        <p>My expertise spans both creative and technical aspects, enabling me to quickly conceptualize and execute solutions. I am adaptable and keen on learning to expand my skill sets and stay updated with evolving web technologies, allowing me to quickly research and adopt new tools, methods, frameworks and tech stacks.</p>
+        <p>I am adept at both the creative and technical aspects, enabling me to quickly conceptualize and execute solutions. I am adaptable and keen on learning to expand my skill sets and stay updated with evolving web technologies, allowing me to be comfortable researching and adopting new tools, methods, frameworks and tech stacks.</p>
 
-        <p><strong>IM LOOKING FOR...</strong><br/>Either a website to build and own with a marketing team or to work alongside a team of developers. My current role involves quickly relaunching sites and sending them off to clients, I feel my expertise could shine on fewer projects and utilize the culmination of my experience and implemented features. Marketing teams are where I’ve had the most experience but I can comfortably work alongside back-end and other front-end developers.</p>
+        <p>I’m looking for a website to build and own with a marketing team or to work alongside a team of developers. My current role involves quickly relaunching sites and sending them off to clients, I feel my expertise could shine on fewer and more focused projects to utilize the culmination of my experience and implemented features. I can comfortably work alongside back-end, other front-end developers, designers and marketers.</p>
       </Section>
 
       <Section classes="portfolio bg-custom-dark-slate text-white py-16 text-center mt-10 text-lg">
