@@ -223,5 +223,15 @@ export const skills = [
 		"id": 45,
 		"name": "DNS",
 		"type": "secondary"
+	},
+	{
+		"id": 46,
+		"name": "Ruby on Rails",
+		"type": "secondary"
+	},
+	{
+		"id": 47,
+		"name": "Next.js",
+		"type": "secondary"
 	}
 ]
